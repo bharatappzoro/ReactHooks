@@ -1,26 +1,29 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [counter,setcounter] = useState(0) // return you and an length array 2
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {counter}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+         onClick={incrisecounter}
         >
-          Learn React
-        </a>
+          incriment
+        </button>       
       </header>
-    </div>
+    </div>   
   );
+  function incrisecounter() {
+    debugger;    
+    setcounter(counter+1) 
+   } 
+
 }
 
 export default App;
